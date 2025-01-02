@@ -4,11 +4,11 @@ from pyrogram import Client
 
 APP_ID = "10001717"
 API_HASH = "c8cdc2079f7ab083e644381740260265"
-BOT_TOKEN = "7303948858:AAFN5mUdrhn2DhWFkRAMUaCPAl5hrCD98bg"    #@Fjgjgkgkbot
+BOT_TOKEN = "7900404714:AAFi3anKacs5EQqi7GkWHt83pqc-43jJ7fA"    #@uytrdsfgvhbot
 DB_URL = [
-    "postgresql://JerryBot:J2024@localhost:5432/JerryBot"
+    "postgresql://Alan:J2024@localhost:5432/Seetha"
 ]
-DB_CHAT_ID = "-1002306074542"
+DB_CHAT_ID = "-1002464018640"
 INTERVAL_IN_SEC = "43200"
 
 logging.basicConfig(
@@ -34,7 +34,7 @@ async def db_backup():
                 x = datetime.datetime.now()
                 date_time = x.strftime("%d %b %Y | %I:%M %p")
                 date = x.strftime("%d-%b-%Y")
-                command_to_run = f"pg_dump --dbname={url} > JerryBackup_{date}.sql"
+                command_to_run = f"pg_dump --dbname={url} > AlanBackup_{date}.sql"
                 try:
                     LOGGER.info("Running backup: %s", command_to_run)
                     result = os.system(command_to_run)
